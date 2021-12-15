@@ -1,0 +1,58 @@
+CRITICAL - 2021-12-15 10:59:56 --> Undefined variable: nomor
+#0 C:\Users\SDP\Documents\GitHub\sistemsurat\app\Views\suratmasuk\create.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\SDP\\Do...', 8, Array)
+#1 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\Users\\SDP\\Do...')
+#2 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('suratmasuk/crea...', Array, true)
+#4 C:\Users\SDP\Documents\GitHub\sistemsurat\app\Controllers\AdminSuratMasukController.php(47): view('suratmasuk/crea...', Array)
+#5 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\AdminSuratMasukController->create()
+#6 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSuratMasukController))
+#7 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\SDP\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\SDP\\Do...')
+#10 {main}
+CRITICAL - 2021-12-15 11:40:34 --> Undefined property: App\Controllers\AdminSuratMasukController::$validation
+#0 C:\Users\SDP\Documents\GitHub\sistemsurat\app\Controllers\AdminSuratMasukController.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\SDP\\Do...', 59, Array)
+#1 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\AdminSuratMasukController->store()
+#2 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSuratMasukController))
+#3 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\SDP\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\SDP\\Do...')
+#6 {main}
+CRITICAL - 2021-12-15 12:19:36 --> Undefined property: App\Controllers\AdminSuratMasukController::$validation
+#0 C:\Users\SDP\Documents\GitHub\sistemsurat\app\Controllers\AdminSuratMasukController.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\SDP\\Do...', 59, Array)
+#1 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\AdminSuratMasukController->store()
+#2 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSuratMasukController))
+#3 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\SDP\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\SDP\\Do...')
+#6 {main}
+CRITICAL - 2021-12-15 12:44:07 --> Undefined variable: barangModel
+#0 C:\Users\SDP\Documents\GitHub\sistemsurat\app\Controllers\AdminSuratMasukController.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\SDP\\Do...', 84, Array)
+#1 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\AdminSuratMasukController->store()
+#2 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSuratMasukController))
+#3 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\SDP\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\SDP\\Do...')
+#6 {main}
+CRITICAL - 2021-12-15 12:56:31 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('suratmasuk/crea...', Array, true)
+#3 C:\Users\SDP\Documents\GitHub\sistemsurat\app\Controllers\AdminSuratMasukController.php(53): view('suratmasuk/crea...', Array)
+#4 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\AdminSuratMasukController->create()
+#5 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSuratMasukController))
+#6 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\SDP\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\SDP\\Do...')
+#9 {main}
+CRITICAL - 2021-12-15 12:57:09 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('suratmasuk/crea...', Array, true)
+#3 C:\Users\SDP\Documents\GitHub\sistemsurat\app\Controllers\AdminSuratMasukController.php(53): view('suratmasuk/crea...', Array)
+#4 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\AdminSuratMasukController->create()
+#5 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSuratMasukController))
+#6 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\SDP\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\SDP\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\SDP\\Do...')
+#9 {main}

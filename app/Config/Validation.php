@@ -40,4 +40,33 @@ class Validation
 	//--------------------------------------------------------------------
 	// Rules
 	//--------------------------------------------------------------------
+	public $surat = [
+        "nomor" => [
+			"rules" => "required",
+			
+		],
+
+		"nama" => [
+			
+			"rules" => "required",
+			
+		],
+		
+		"tanggal" => [
+			
+			"rules" => "required",
+			
+		],
+		"tujuan" => [
+			"rules" => "required",
+			
+		],
+		"dok" => [
+			
+			"rules" => 'required',
+			
+		]
+    ];
+
+    
 }

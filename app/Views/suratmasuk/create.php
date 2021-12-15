@@ -2,6 +2,19 @@
 
 <?= $this->section('content');?>
 
+<?php
+
+  $submit =[
+    'name' => 'submit',
+    'id' => 'submit',
+    'value' => 'Submit',
+    'class' => 'btn btn-primary',
+    'type' => 'submit',
+
+  ];
+?>
+
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -28,9 +41,10 @@
                 Form Tambah 
             </div>
             <div class="card-body">
-            <form action="/admin/suratmasuk/store" method="POST">
-            
-                <div class="form-group">
+
+
+            <?= form_open_multipart('/admin/suratmasuk/store')?>
+                  <div class="form-group">
                             <label for="nomor">Nomor Surat</label>
                             <input type="text" class="form-control <?= ($validation -> hasError('nomor')) ? 'is-invalid' : ''; ?>" id="nomor" name="nomor" value="<?= old('nomor'); ?>">
                             <?php if ($validation -> hasError('nomor')) : ?>
@@ -39,6 +53,7 @@
                             </div>
                             <?php endif; ?>
                         </div>
+
                         <div class="form-group">
                             <label for="nama">Nama Surat</label>
                             <input type="text" class="form-control <?= ($validation -> hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama" name="nama" value="<?= old('nama'); ?>">
@@ -67,7 +82,7 @@
                             <?= $validation -> getError('tujuan'); ?>
                             </div>
                             <?php endif; ?>
-                          </div>
+                        </div>
                       
                           <div class="form-group">
                             <label for="dok">File Surat</label>
@@ -78,13 +93,13 @@
                             </div>
                             <?php endif; ?>
                           </div>
-                    
-                    
-                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit</button>                
-                </form>   
-            </div>
+                    <div class="mt-5">                    
+                      <?= form_submit($submit)?>
+                    </div>
+              <?= form_close()?>
+              </div>
         </div>
-    </div>
+  </div>
 
     <!-- Main content -->
     <section class="content">

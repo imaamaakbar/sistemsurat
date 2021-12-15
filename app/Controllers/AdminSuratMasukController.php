@@ -5,6 +5,12 @@ use App\Controllers\BaseController;
 
 class AdminSuratMasukController extends BaseController
 {
+	public function __construct(){
+		helper('form');
+		$this->validation = \Config\Services::validation();
+	}
+
+
     public function index()
     {	
 		if (session()->get('email') == '') {
@@ -24,6 +30,8 @@ class AdminSuratMasukController extends BaseController
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('login'));
 		 }
+	
+		
         $SuratMasukUserModel = model("SuratMasukUserModel");
 		$data = [
 			'suratmasukuser' => $SuratMasukUserModel->findAll()
@@ -32,12 +40,13 @@ class AdminSuratMasukController extends BaseController
     }
 
     public function create()
-    {
+    {	
 		if (session()->get('email') == '') {
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('login'));
 		 }
         session();
+        
         $data = [
             'validation' => \Config\Services::validation(),
         ];
@@ -45,67 +54,34 @@ class AdminSuratMasukController extends BaseController
     }
 
     public function store()
-    {
+    {	
 		if (session()->get('email') == '') {
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('login'));
 		 }
-		$valid = $this->validate([
-			"nomor" => [
-				"label" => "Nomor",
-				"rules" => "required|is_unique[suratmasuk.nomor]",
-				"errors" => [
-					"required" => "{field} Harus Diisi!",
-					"is_unique" => "{filed} sudah ada!"
-				]
-			],
+		 if($this->request->getPost()){
 
-			"nama" => [
-				"label" => "Nama",
-				"rules" => "required",
-				"errors" => [
-					"required" => "{field} Harus Diisi!"
-				]
-			],
-			
-			"tanggal" => [
-				"label" => "Tanggal",
-				"rules" => "required",
-				"errors" => [
-					"{field} Harus Diisi!"
-				]
-			],
-			"tujuan" => [
-				"label" => "Tanggal",
-				"rules" => "required",
-				"errors" => [
-					"{field} Harus Diisi!"
-				]
-			],
-			"dok" => [
-				"label" => "Berkas",
-				"rules" => "required",
-				"errors" => [
-					"{field} Harus Diisi!"
-				]
-			]
-		]);
-
-		if ($valid) {
-			$data = [
-				'nomor' => $this->request->getVar('nomor'),
-				'nama' => $this->request->getVar('nama'),
-				'tanggal' => $this->request->getVar('tanggal'),
-				'tujuan' => $this->request->getVar('tujuan'),
-				'dok' => $this->request->getVar('dok')
-			];
+		
+		$data = $this->request->getPost();
+		$this->validation->run($data, 'surat');
+        $errors = $this->validation->getErrors();
+		
+		if(!$errors){
 
 			$SuratMasukModel = model("SuratMasukModel");
-			$SuratMasukModel -> insert($data);
-			return redirect()->to(base_url('/admin/suratmasuk/'));
+			$suratmasuk = new \App\Entities\Dok();
+			$suratmasuk ->fill($data);
+			$suratmasuk ->dok =$this->request->getFile('dok');
+
+			$SuratMasukModel ->save($suratmasuk);
+                return redirect()->to(base_url('/admin/suratmasuk/'));
 		} else {
 			return redirect()->to(base_url('/admin/suratmasuk/create'))->withInput()->with('validation', $this->validator);
 		}
+	}	
+		
+
+		
     }
 
 	public function delete($id)
