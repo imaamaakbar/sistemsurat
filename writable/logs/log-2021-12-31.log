@@ -1,0 +1,42 @@
+CRITICAL - 2021-12-31 02:24:15 --> Constant FILTER_SANITIZE_STRING is deprecated
+#0 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\HTTP\CLIRequest.php(205): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Constant FILTER...', 'C:\\Users\\Imam A...', 205)
+#1 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\HTTP\CLIRequest.php(70): CodeIgniter\HTTP\CLIRequest->parseCommand()
+#2 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Config\Services.php(133): CodeIgniter\HTTP\CLIRequest->__construct(Object(Config\App))
+#3 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Config\BaseService.php(263): CodeIgniter\Config\Services::clirequest(Object(Config\App), false)
+#4 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Config\BaseService.php(192): CodeIgniter\Config\BaseService::__callStatic('clirequest', Array)
+#5 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Config\Services.php(128): CodeIgniter\Config\BaseService::getSharedInstance('clirequest', Object(Config\App))
+#6 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Config\BaseService.php(263): CodeIgniter\Config\Services::clirequest(Object(Config\App))
+#7 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(586): CodeIgniter\Config\BaseService::__callStatic('clirequest', Array)
+#8 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(309): CodeIgniter\CodeIgniter->getRequestObject()
+#9 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CLI\Console.php(61): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\spark(65): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2021-12-31 03:18:46 --> Error connecting to the database: Unknown database 'mydatabase'
+CRITICAL - 2021-12-31 03:18:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'mydatabase'
+#0 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\app\Controllers\UserSuratMasukController.php(14): CodeIgniter\BaseModel->findAll()
+#5 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\UserSuratMasukController->index()
+#6 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSuratMasukController))
+#7 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Imam A...')
+#10 {main}
+ERROR - 2021-12-31 03:19:25 --> Error connecting to the database: Unknown database 'mydatabase'
+ERROR - 2021-12-31 03:21:26 --> Table 'surat.admin' doesn't exist
+CRITICAL - 2021-12-31 03:21:26 --> Table 'surat.admin' doesn't exist
+#0 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\app\Models\AdminModel.php(10): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\app\Controllers\login.php(19): App\Models\AdminModel->get_data('imamakbar@admin...', '12345678')
+#6 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\login->login_action()
+#7 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#8 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Imam Akbar\Documents\GitHub\sistemsurat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Imam A...')
+#11 {main}
